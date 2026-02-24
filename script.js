@@ -43,17 +43,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    mobileMenuBtn.addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+
+    const toggleMobileMenu = () => {
         mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+
         // Simple logic for the demo visual interaction
         if (mobileMenuBtn.classList.contains('active')) {
             mobileMenuBtn.children[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             mobileMenuBtn.children[1].style.opacity = '0';
             mobileMenuBtn.children[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu open
         } else {
             mobileMenuBtn.children[0].style.transform = 'none';
             mobileMenuBtn.children[1].style.opacity = '1';
             mobileMenuBtn.children[2].style.transform = 'none';
+            document.body.style.overflow = '';
         }
+    };
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.nav-link, .btn-cert-nav').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
     });
 });
