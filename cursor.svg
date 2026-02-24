@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top arm (Code Collab Red) -->
+  <line x1="12" y1="0" x2="12" y2="10" stroke="#f04e36" stroke-width="2"/>
+  <!-- Bottom arm (Green) -->
+  <line x1="12" y1="14" x2="12" y2="24" stroke="#27c93f" stroke-width="2"/>
+  <!-- Left arm (Yellow) -->
+  <line x1="0" y1="12" x2="10" y2="12" stroke="#ffbd2e" stroke-width="2"/>
+  <!-- Right arm (Blue) -->
+  <line x1="14" y1="12" x2="24" y2="12" stroke="#81a1c1" stroke-width="2"/>
+  <!-- Center Dot -->
+  <circle cx="12" cy="12" r="2" fill="#2d2d2d" />
+</svg>

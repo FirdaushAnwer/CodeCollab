@@ -1,0 +1,69 @@
+[
+    {
+        "title": "MICROSOFT CYBERSCURITY architect expert CERTIFICATION",
+        "icons": [
+            {
+                "class": "fa-brands fa-shield-halved",
+                "color": "#e34c26",
+                "style": ""
+            },
+            {
+                "class": "fa-brands fa-lock",
+                "color": "#264de4",
+                "style": "margin-left: -20px; font-size: 60px; margin-top: 40px;"
+            }
+        ],
+        "iconBg": "var(--cert-card-top)",
+        "bulletPoints": [
+            "self placed learning",
+            "hands on practice",
+            "certification at end of the course"
+        ],
+        "link": "https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/",
+        "buttonText": "Enroll Now - Free!"
+    },
+    {
+        "title": "Full AI/ML by Amazon",
+        "icons": [
+            {
+                "class": "fa-solid fa-laptop-code",
+                "color": "var(--bg-color)",
+                "style": ""
+            },
+            {
+                "class": "fa-solid fa-brain",
+                "color": "var(--cert-accent)",
+                "style": "margin-left: -20px; font-size: 50px; margin-top: 40px;"
+            }
+        ],
+        "iconBg": "var(--cert-hero-bg)",
+        "bulletPoints": [
+            "This course equips you with essential AI and ML skills for predicting customer churn in subscriptions. Delve into data exploration, model building and evaluation, prediction explanations, and deploying monitored systems. Cover key metrics, A/B testing, drift detection, and CI/CD pipelines to deliver production-ready ML solutions that drive business success."
+        ],
+        "link": "https://www.elevify.com/en-in/courses/engineering-construction-and-technology/technology/ai-ml-course-1597f?utm_source=bing&utm_medium=cpc&utm_campaign=enrollment_en_in_icp3&utm_id=enrollment_en_in_icp3&msclkid=2f1e1868e0821922ada271f5bc732e10",
+        "buttonText": "Enroll Now - Free!"
+    },
+    {
+        "title": "Full-Stack & Cloud Architecture",
+        "icons": [
+            {
+                "class": "fa-solid fa-laptop-code",
+                "color": "var(--text-dark)",
+                "style": ""
+            },
+            {
+                "class": "fa-solid fa-leaf",
+                "color": "#4caf50",
+                "style": "font-size: 40px; position: absolute; margin-top: -30px; margin-left: 20px;"
+            }
+        ],
+        "iconBg": "var(--cert-card-top)",
+        "bulletPoints": [
+            "End-to-end Deployments",
+            "Scalable Infrastructure",
+            "Cloud Native Patterns"
+        ],
+        "link": "https://www.freecodecamp.org/learn/information-security/",
+        "buttonText": "Enroll Now - Free!"
+    }
+]

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Collab | Level Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;600;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .level-up-page {
+            padding: 150px 40px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+            z-index: 0;
+        }
+
+        .model-background-img {
+            position: fixed;
+            bottom: -20px;
+            right: 5%;
+            height: 90vh;
+            /* Scale to fit height nicely */
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 1024px) {
+            .model-background-img {
+                right: -100px;
+                opacity: 0.3;
+                /* Fade out more on smaller screens to not block text */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .model-background-img {
+                display: none;
+                /* Hide on mobile to save space */
+            }
+        }
+
+        .level-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .level-header h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .level-header p {
+            font-size: 20px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .path-card {
+            background: var(--bg-color);
+            padding: 50px 40px;
+            border: 2px solid var(--text-dark);
+            border-radius: 8px;
+            box-shadow: 8px 8px 0px rgba(45, 45, 45, 0.1);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .path-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 15px 0px rgba(240, 78, 54, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .path-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 24px;
+        }
+
+        .path-card h3 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            color: var(--primary-color);
+        }
+
+        .path-card p {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .path-list {
+            list-style: none;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .path-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .path-list li i {
+            color: #27c93f;
+        }
+
+        .path-action {
+            width: 100%;
+            text-align: center;
+        }
+
+        .path-action:visited,
+        .path-action:active {
+            color: inherit;
+        }
+
+        .btn.path-action.btn-dark:visited {
+            color: var(--bg-color);
+        }
+
+        .btn.path-action.btn-primary:visited,
+        .btn.path-action.btn-primary:active {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container" style="text-decoration: none;">
+                <div class="css-logo" title="Code Collab">
+                    <div class="logo-top">
+                        <div class="red-box-vertical"></div>
+                        <span class="logo-text-code">CODE</span>
+                    </div>
+                    <div class="logo-bottom">
+                        <div class="red-box-horizontal">
+                            <span class="logo-text-collab">COLLAB</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="index.html" class="btn btn-outline nav-btn">Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="level-up-page">
+        <img src="assets/ai-model-transparent.jpg" alt="CodeCollab AI Model" class="model-background-img fade-up">
+
+        <div class="level-header fade-up">
+            <h1>Choose Your <span class="outline-text highlight">Path</span></h1>
+            <p>Whether you are just starting out, building advanced projects, or looking to master complex
+                architectures, we have the resources for you to Level Up.</p>
+        </div>
+
+        <div class="path-grid">
+            <!-- Beginner -->
+            <div class="path-card fade-up" data-tilt data-tilt-max="5">
+                <i class="fa-solid fa-seedling path-icon"></i>
+                <h3>Beginner</h3>
+                <p>Start your coding journey with strong fundamentals, easy-to-follow tutorials, and a supportive
+                    community.</p>
+                <ul class="path-list">
+                    <li><i class="fa-solid fa-check"></i> HTML, CSS, JS Basics</li>
+                    <li><i class="fa-solid fa-check"></i> First Personal Project</li>
+                    <li><i class="fa-solid fa-check"></i> Intro to Git & GitHub</li>
+                </ul>
+                <a href="beginner.html" class="btn btn-dark path-action">Start Learning</a>
+            </div>
+
+            <!-- Intermediate -->
+            <div class="path-card fade-up" style="animation-delay: 0.1s;" data-tilt data-tilt-max="5">
+                <i class="fa-solid fa-code-branch path-icon"></i>
+                <h3>Intermediate</h3>
+                <p>Build dynamic applications, collaborate with others, and learn modern frameworks and tools.</p>
+                <ul class="path-list">
+                    <li><i class="fa-solid fa-check"></i> React, Node.js, Databases</li>
+                    <li><i class="fa-solid fa-check"></i> Open Source Contributions</li>
+                    <li><i class="fa-solid fa-check"></i> Pair Programming</li>
+                </ul>
+                <a href="#" class="btn btn-dark path-action">Comming Soon</a>
+            </div>
+
+            <!-- Advance -->
+            <div class="path-card fade-up" style="animation-delay: 0.2s;" data-tilt data-tilt-max="5">
+                <i class="fa-solid fa-rocket path-icon"></i>
+                <h3>Advance</h3>
+                <p>Master system design, optimize performance, and mentor the next generation of developers.</p>
+                <ul class="path-list">
+                    <li><i class="fa-solid fa-check"></i> System Design & Architecture</li>
+                    <li><i class="fa-solid fa-check"></i> Large Scale Codebases</li>
+                    <li><i class="fa-solid fa-check"></i> Tech Talks & Mentorship</li>
+                </ul>
+                <a href="#" class="btn btn-primary path-action">Comming Soon</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

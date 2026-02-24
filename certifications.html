@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Collab | Certifications</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;600;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --cert-hero-bg: var(--text-dark);
+            /* Dark grey from theme */
+            --cert-accent: var(--primary-color);
+            /* Red from theme */
+            --cert-card-top: var(--bg-color);
+            /* Beige background for icons */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            /* Beige background to match theme */
+        }
+
+        .cert-hero {
+            background-color: var(--cert-hero-bg);
+            padding: 180px 40px 160px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cert-hero-content {
+            flex: 1;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .cert-hero h1 {
+            color: #fff;
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: none;
+            margin-bottom: 20px;
+        }
+
+        .cert-hero h1 span {
+            color: var(--cert-accent);
+        }
+
+        /* Abstract shapes in the background */
+        .cert-bg-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.1;
+            background-image:
+                radial-gradient(circle at 80% 20%, #ffffff 0%, transparent 40%),
+                radial-gradient(circle at 10% 80%, #ffffff 0%, transparent 60%);
+        }
+
+        .cert-hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 2;
+        }
+
+        .cert-hero-image img {
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+        }
+
+        .cert-cards-container {
+            max-width: 1200px;
+            margin: -100px auto 100px;
+            /* Pulls cards up into the hero section */
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 0 40px;
+        }
+
+        .cert-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .cert-card-icon-area {
+            background-color: var(--cert-card-top);
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+
+        .cert-card-icon-area i {
+            font-size: 80px;
+            color: var(--cert-hero-bg);
+        }
+
+        .cert-card-content {
+            padding: 30px 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cert-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            text-align: center;
+            min-height: 52px;
+        }
+
+        .cert-card ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+            flex: 1;
+        }
+
+        .cert-card ul li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .cert-card ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--text-dark);
+        }
+
+        .btn-cert {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: capitalize;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        .btn-cert:hover {
+            background-color: var(--cert-accent);
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 992px) {
+            .cert-cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cert-hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 150px;
+            }
+
+            .cert-hero-image {
+                margin-top: 50px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cert-cards-container {
+                grid-template-columns: 1fr;
+                margin-top: 40px;
+            }
+
+            .cert-hero {
+                padding-bottom: 80px;
+            }
+        }
+
+        /* Specific adjustments for navbar on this page */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container" style="text-decoration: none;">
+                <div class="css-logo" title="Code Collab">
+                    <div class="logo-top">
+                        <div class="red-box-vertical"></div>
+                        <span class="logo-text-code">CODE</span>
+                    </div>
+                    <div class="logo-bottom">
+                        <div class="red-box-horizontal">
+                            <span class="logo-text-collab">COLLAB</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#events" class="nav-link">Events</a></li>
+                <li><a href="compiler.html" target="_blank" class="nav-link"
+                        style="color: var(--primary-color);">Compiler <i class="fa-solid fa-code"></i></a></li>
+            </ul>
+
+            <a href="levelup.html" class="btn btn-levelup nav-btn">
+                Level Up
+                <i class="fa-solid fa-bolt"></i>
+            </a>
+
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="cert-hero">
+        <div class="cert-bg-shapes"></div>
+        <div class="cert-hero-content">
+            <h1>Unlock Your Potential: <span>Free Coding Certification</span> Courses!</h1>
+        </div>
+        <div class="cert-hero-image">
+            <!-- Background handled in CSS -->
+        </div>
+    </header>
+
+    <!-- Cards Section -->
+    <section id="certifications-container" class="cert-cards-container">
+        <!-- Cards injected dynamically via certifications.js -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="css-logo mini" title="Code Collab">
+                    <div class="logo-top">
+                        <div class="red-box-vertical"></div>
+                        <span class="logo-text-code">CODE</span>
+                    </div>
+                    <div class="logo-bottom">
+                        <div class="red-box-horizontal">
+                            <span class="logo-text-collab">COLLAB</span>
+                        </div>
+                    </div>
+                </div>
+                <p>Building a stronger developer ecosystem, one commit at a time.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="https://discord.gg/Th34gTTY" target="_blank">Discord Server</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Open Source</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Code Collab. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/FirdaushAnwer" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/md-firdaush" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="certifications.js"></script>
+</body>
+
+</html>

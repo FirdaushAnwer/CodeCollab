@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Collab | Online Compiler</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Outfit:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Monaco Editor CSS -->
+    <link rel="stylesheet" data-name="vs/editor/editor.main"
+        href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/editor/editor.main.min.css">
+
+    <link rel="stylesheet" href="compiler.css">
+</head>
+
+<body>
+
+    <!-- Title Bar -->
+    <header class="title-bar">
+        <div class="window-controls">
+            <div class="control red"></div>
+            <div class="control yellow"></div>
+            <div class="control green"></div>
+        </div>
+        <div class="title-text">Code Collab - Online Compiler</div>
+        <div class="top-actions">
+            <select id="language-select" class="dropdown">
+                <option value="html">HTML/CSS/JS</option>
+                <option value="python">Python</option>
+                <option value="c">C</option>
+                <option value="java">Java</option>
+            </select>
+            <button id="run-btn" class="btn-run"><i class="fa-solid fa-play"></i> Run</button>
+        </div>
+    </header>
+
+    <!-- Main IDE Container -->
+    <div class="ide-container">
+
+        <!-- Activity Bar (Left Sidebar) -->
+        <div class="activity-bar">
+            <div class="activity-icon active"><i class="fa-regular fa-file-code"></i></div>
+            <div class="activity-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="activity-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div class="activity-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="activity-icon"><i class="fa-solid fa-gear" style="margin-top: auto;"></i></div>
+        </div>
+
+        <!-- Explorer Pane -->
+        <div class="explorer-pane">
+            <div class="explorer-title">EXPLORER</div>
+            <div class="explorer-item active" id="explorer-filename"><i class="fa-brands fa-html5"
+                    style="color: #e34f26;"></i> index.html</div>
+        </div>
+
+        <!-- Editor Area -->
+        <div class="editor-area">
+
+            <!-- Editor Tabs -->
+            <div class="editor-tabs">
+                <div class="tab active" id="tab-filename"><i class="fa-brands fa-html5" style="color: #e34f26;"></i>
+                    index.html</div>
+            </div>
+
+            <!-- Monaco Editor Container -->
+            <div id="monaco-container"></div>
+
+            <!-- Output / Terminal Pane (Bottom) -->
+            <div class="panel-area" id="panel-area">
+                <div class="panel-header">
+                    <div class="panel-tabs">
+                        <div class="panel-tab active" id="tab-output">OUTPUT</div>
+                        <div class="panel-tab" id="tab-preview">PREVIEW</div>
+                    </div>
+                    <div class="panel-actions">
+                        <i class="fa-solid fa-trash" id="clear-output" title="Clear Output"></i>
+                        <i class="fa-solid fa-xmark" id="close-panel" title="Close Panel"
+                            style="margin-left: 10px;"></i>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <!-- Standard Output Terminal -->
+                    <pre id="output-terminal" class="terminal-text" style="display: none;"></pre>
+                    <!-- Iframe for HTML Live Preview -->
+                    <iframe id="preview-frame" class="preview-frame" sandbox="allow-scripts"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- RequireJS for loading Monaco -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="compiler.js"></script>
+
+</body>
+
+</html>

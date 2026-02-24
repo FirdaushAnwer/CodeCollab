@@ -1,0 +1,70 @@
+{
+    "books": [
+        {
+            "title": "JAVA<br>The Complete Reference",
+            "url": "https://drive.google.com/file/d/1ofM96L0cK3Tr-5VsxjvaNjDa93wO5SMN/view?usp=drivesdk",
+            "gradient": "linear-gradient(135deg, #0d9488, #0f766e)",
+            "textColor": "white",
+            "borderColor": "rgba(255, 255, 255, 0.2)",
+            "icon": "fa-solid fa-code"
+        },
+        {
+            "title": "HTML+CSS<br>John Duckett",
+            "url": "https://drive.google.com/file/d/1anHpypmxgz-o0CZyrxETB6sQ5nMRWlQQ/view?usp=drivesdk",
+            "gradient": "linear-gradient(135deg, #1e293b, #0f172a)",
+            "textColor": "#fbbf24",
+            "borderColor": "#fbbf24",
+            "icon": "fa-brands fa-html"
+        },
+        {
+            "title": "Java Script And JS Querry",
+            "url": "https://drive.google.com/file/d/1DGjV2dU4zTYddVdai1p8gUBzLiTwXYe_/view?usp=drivesdk",
+            "gradient": "linear-gradient(135deg, #e2e8f0, #94a3b8)",
+            "textColor": "#1e293b",
+            "borderColor": "rgba(255, 255, 255, 0.2)",
+            "icon": "fa-solid fa-network-wired"
+        },
+        {
+            "title": "Data Structures And Alogo<br>in java",
+            "url": "https://drive.google.com/file/d/1iIi0y0PMOcOP8oqJhg1uYkJXSrnb6OJg/view?usp=drivesdk",
+            "gradient": "linear-gradient(135deg, #0d9488, #0f766e)",
+            "textColor": "white",
+            "borderColor": "rgba(255, 255, 255, 0.2)",
+            "icon": "fa-solid fa-code"
+        }
+    ],
+    "videos": [
+        {
+            "title": "Programming Journey Start",
+            "channel": "FreeCodeCamp • Intro to programming",
+            "url": "https://youtu.be/zOjov-2OZ0E?si=_Ax5PtzP5h4Zl431",
+            "iconBg": "#0ea5e9",
+            "iconColor": "white",
+            "icon": "fa-brands fa-youtube"
+        },
+        {
+            "title": "HTML & CSS FULL COURSE",
+            "channel": "JavaScript Mastery • 12hrs",
+            "url": "https://www.youtube.com/watch?v=kUMe1FH4CHE",
+            "iconBg": "#fbbf24",
+            "iconColor": "#1e293b",
+            "icon": "fa-brands fa-js"
+        },
+        {
+            "title": "REACT JS FOR BEGINNERS",
+            "channel": "FreeCodeCamp • Full Stack",
+            "url": "https://www.youtube.com/watch?v=bMknfKXIFA8",
+            "iconBg": "#0ea5e9",
+            "iconColor": "white",
+            "icon": "fa-brands fa-react"
+        }
+    ],
+    "cheatsheets": [
+        {
+            "title": "CSS Grid & Flexbox",
+            "status": "Essential Web Dev",
+            "url": "https://overapi.com/static/cs/CSS3-Cheat-Sheet.pdf",
+            "icon": "fa-brands fa-css3-alt"
+        }
+    ]
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Code Collab - A community for developers to build together, share knowledge, and grow.">
+    <title>Code Collab | Build. Share. Grow.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;600;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <!-- CSS Logo mimicking the provided image -->
+                <div class="css-logo" title="Code Collab">
+                    <div class="logo-top">
+                        <div class="red-box-vertical"></div>
+                        <span class="logo-text-code">CODE</span>
+                    </div>
+                    <div class="logo-bottom">
+                        <div class="red-box-horizontal">
+                            <span class="logo-text-collab">COLLAB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="certifications.html" target="_blank" class="btn-cert-nav">
+                        Free Certifications <i class="fa-solid fa-graduation-cap"></i></a>
+                </li>
+                <li><a href="compiler.html" target="_blank" class="nav-link"
+                        style="color: var(--primary-color);">Compiler <i class="fa-solid fa-code"></i></a></li>
+            </ul>
+
+            <a href="levelup.html" target="_blank" class="btn btn-levelup nav-btn">
+                Level Up
+                <i class="fa-solid fa-bolt"></i>
+            </a>
+
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="badge fade-up">👋 Welcome to the Community</div>
+                <h1 class="hero-title fade-up" style="animation-delay: 0.1s;">
+                    <span class="anim-word">CONNECT.</span><br>
+                    <span class="highlight anim-word" style="animation-delay: 1.5s;">COLLABORATE.</span><br>
+                    <span class="anim-word" style="animation-delay: 3s;">CREATE.</span>
+                </h1>
+                <p class="hero-subtitle fade-up" style="animation-delay: 0.2s;">
+                    The ultimate hub for developers, designers, and creators to build real-world projects, share
+                    knowledge, and level up their careers together.
+                </p>
+                <div class="hero-cta fade-up" style="animation-delay: 0.3s;">
+                    <a href="#join" class="btn btn-primary btn-large">
+                        Start Collaborating
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="levelup.html" target="_blank" class="btn btn-levelup btn-large">
+                        Level Up
+                        <i class="fa-solid fa-bolt"></i>
+                    </a>
+                    <a href="#about" class="btn btn-outline btn-large">Learn More</a>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-up" style="animation-delay: 0.4s;">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <div class="window-title">main.js</div>
+                    </div>
+                    <div class="window-body">
+                        <pre><code><span class="keyword">import</span> { Community } <span class="keyword">from</span> <span class="string">'@code-collab/core'</span>;
+
+<span class="keyword">const</span> developer = {
+    name: <span class="string">"You"</span>,
+    skills: [<span class="string">"Learning"</span>, <span class="string">"Building"</span>],
+    status: <span class="string">"Ready"</span>
+};
+
+<span class="keyword">async function</span> <span class="function">innovate</span>() {
+    <span class="keyword">await</span> Community.<span class="function">join</span>(developer);
+    <span class="keyword">return</span> Community.<span class="function">buildAwesomeThings</span>();
+}
+
+<span class="function">innovate</span>();
+</code></pre>
+                    </div>
+                </div>
+                <!-- Floating elements -->
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+            </div>
+        </section>
+
+        <!-- Marquee Section -->
+        <div class="scrolling-text-container">
+            <div class="scrolling-text">
+                <span>PAIR PROGRAMMING</span> • <span>HACKATHONS</span> • <span>MENTORSHIP</span> • <span>CODE
+                    REVIEWS</span> • <span>PROJECT SHOWCASES</span> • <span>PAIR PROGRAMMING</span> •
+                <span>HACKATHONS</span> • <span>MENTORSHIP</span> • <span>CODE REVIEWS</span> • <span>PROJECT
+                    SHOWCASES</span> •
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about-container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title">About <span class="outline-text">CodeColab</span></h2>
+                    <p class="section-desc tagline">Build Together.</p>
+                </div>
+
+                <div class="about-content fade-up">
+                    <p class="about-intro">CodeColab is a community-driven platform designed to help students grow from
+                        curious beginners into confident, skilled developers.</p>
+                    <p>We started CodeColab with a simple belief: coding becomes powerful when people learn and create
+                        together. Whether you're a college student writing your first program or an advanced developer
+                        refining complex systems, CodeColab gives you the environment to learn, collaborate, and grow.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card fade-up" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <h3>For Beginners</h3>
+                        <p>Starting from scratch? We provide beginner-friendly guidance, clear learning paths, and a
+                            supportive space where every question is welcome. Our focus is on helping you build strong
+                            fundamentals with confidence.</p>
+                    </div>
+                    <div class="about-card fade-up" style="animation-delay: 0.1s;" data-tilt data-tilt-max="5"
+                        data-tilt-speed="400">
+                        <h3>For College Students</h3>
+                        <p>From academic projects to internships and placements, we help bridge the gap between
+                            classroom theory and real-world skills. Collaborate on projects, participate in discussions,
+                            and strengthen your practical knowledge.</p>
+                    </div>
+                    <div class="about-card fade-up" style="animation-delay: 0.2s;" data-tilt data-tilt-max="5"
+                        data-tilt-speed="400">
+                        <h3>For Advanced Developers</h3>
+                        <p>Already experienced? Take your skills further through peer discussions, live coding sessions,
+                            and collaborative projects. Mentor others, contribute to meaningful work, and challenge
+                            yourself in a growth-driven community.</p>
+                    </div>
+                </div>
+
+                <div class="about-footer fade-up">
+                    <p>CodeColab isn't just a platform — it's a place where ideas turn into projects and learners turn
+                        into builders.</p>
+                    <h4>Build Together. Grow Together.</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Level Up <span class="outline-text">Your Skills</span></h2>
+                <p class="section-desc">We provide the ecosystem. You bring the passion. Here's what you can expect when
+                    you join Code Collab.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-up" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                    data-tilt-max-glare="0.2">
+                    <div class="feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Pair Programming</h3>
+                    <p>Find partners to tackle complex algorithms, debug tricky issues, or build new features
+                        side-by-side.</p>
+                </div>
+
+                <div class="feature-card fade-up" style="animation-delay: 0.1s;" data-tilt data-tilt-max="10"
+                    data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>Project Bounties</h3>
+                    <p>Contribute to open-source projects or collaborate on community-driven startup MVPs.</p>
+                </div>
+
+                <div class="feature-card fade-up" style="animation-delay: 0.2s;" data-tilt data-tilt-max="10"
+                    data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Code Reviews</h3>
+                    <p>Get constructive feedback on your pull requests from experienced developers in our dedicated
+                        channels.</p>
+                </div>
+
+                <div class="feature-card fade-up" style="animation-delay: 0.3s;" data-tilt data-tilt-max="10"
+                    data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Tech Talks</h3>
+                    <p>Join weekly workshops, tech talks, and AMA sessions with industry professionals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="events" id="events">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Upcoming <span class="outline-text">Events</span></h2>
+                <p class="section-desc">Join our online hackathons, build cool projects, and win exciting prizes.</p>
+            </div>
+
+            <div class="events-grid" id="events-container">
+                <div class="loading-events" style="text-align: center; padding: 40px; color: var(--text-light);">
+                    <i class="fa-solid fa-circle-notch fa-spin fa-2x"></i>
+                    <p style="margin-top: 15px;">Loading upcoming hackathons...</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="join">
+            <div class="cta-box fade-up">
+                <h2>Ready to write some code?</h2>
+                <p>Join thousands of developers building the future, together.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://discord.gg/Th34gTTY" target="_blank" class="btn btn-dark btn-large">
+                        <i class="fa-brands fa-discord"></i> Join the Discord
+                    </a>
+                    <a href="https://chat.whatsapp.com/KHV2EDwLJEkIPaHrvMkc0W" target="_blank"
+                        class="btn btn-dark btn-large"
+                        style="background-color: #25D366; border-color: #25D366; color: white;">
+                        <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Group
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="css-logo mini" title="Code Collab">
+                    <div class="logo-top">
+                        <div class="red-box-vertical"></div>
+                        <span class="logo-text-code">CODE</span>
+                    </div>
+                    <div class="logo-bottom">
+                        <div class="red-box-horizontal">
+                            <span class="logo-text-collab">COLLAB</span>
+                        </div>
+                    </div>
+                </div>
+                <p>Building a stronger developer ecosystem, one commit at a time.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="https://discord.gg/Th34gTTY" target="_blank">Discord Server</a></li>
+                        <li><a href="https://chat.whatsapp.com/KHV2EDwLJEkIPaHrvMkc0W" target="_blank">WhatsApp
+                                Group</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Open Source</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Code Collab. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/FirdaushAnwer" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/md-firdaush" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initializeEvents } from './events.js';
+        document.addEventListener('DOMContentLoaded', initializeEvents);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
